@@ -1,0 +1,53 @@
+# --- Python Virtual Environments ---
+.venv/
+venv/
+env/
+bin/
+lib/
+python/
+
+# --- Dependency Management & Packaging ---
+# If using uv, poetry, or pip
+node_modules/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+__pycache__/
+*.py[cod]
+*$py.class
+dist/
+build/
+*.egg-info/
+
+# --- Environment Variables & Secrets (CRITICAL) ---
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+aws_credentials
+.aws/
+
+# --- AWS CDK & Infrastructure ---
+cdk.out/
+.cdk.staging/
+.parcel-cache/
+
+# --- Data & ML Artifacts (Local only) ---
+# Prevent large datasets or models from being committed
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+ml/artifacts/
+*.log
+*.sqlite
+.ipynb_checkpoints/
+.sagemaker/
+
+# --- OS & IDE Specific ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
